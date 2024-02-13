@@ -16,7 +16,6 @@ public class Cliente extends Pessoa{
 	
 	
 	@JsonIgnore
-	
 	@OneToMany(mappedBy = "cliente")
 	private List <Chamado> chamados = new ArrayList<>();
 
