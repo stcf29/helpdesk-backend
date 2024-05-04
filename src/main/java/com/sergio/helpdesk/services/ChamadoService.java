@@ -47,7 +47,7 @@ public class ChamadoService {
 		return repository.save(newChamado(objDTO));
 	}
 	
-	public Chamado update(Integer id, @Valid ChamadoDTO objDTO) {
+	public Chamado update(Integer id, @Valid ChamadoDTO objDTO) throws ObjectNotFoundException {
 		objDTO.setId(id);
 		Chamado oldObj = findById(id);
 		oldObj = newChamado(objDTO);
